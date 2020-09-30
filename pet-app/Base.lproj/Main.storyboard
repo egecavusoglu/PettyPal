@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,26 +12,32 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pet_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2P-Dx-9Ea" userLabel="Lower Container">
-                                <rect key="frame" x="0.0" y="113" width="568" height="207"/>
+                                <rect key="frame" x="0.0" y="655" width="414" height="207"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nKu-nn-its" userLabel="Button HStack">
-                                        <rect key="frame" x="10" y="0.0" width="548" height="35"/>
+                                        <rect key="frame" x="10" y="0.0" width="394" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xf-gD-L7f">
-                                                <rect key="frame" x="0.0" y="0.0" width="264" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="35"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDw-TY-IE1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A50-9g-trn">
-                                                <rect key="frame" x="284" y="0.0" width="264" height="35"/>
+                                                <rect key="frame" x="207" y="0.0" width="187" height="35"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Feed"/>
+                                                <connections>
+                                                    <action selector="feed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="egC-Ry-8hj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -40,10 +46,10 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7nS-5Y-ydv" userLabel="HStack">
-                                        <rect key="frame" x="0.0" y="35" width="568" height="128"/>
+                                        <rect key="frame" x="0.0" y="35" width="414" height="128"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYF-KU-niN" userLabel="HappinessContainer">
-                                                <rect key="frame" x="0.0" y="0.0" width="568" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happiness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ0-CQ-j9w">
                                                         <rect key="frame" x="30" y="10" width="68" height="17"/>
@@ -52,14 +58,14 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-it-j72">
-                                                        <rect key="frame" x="20" y="32" width="528" height="20"/>
+                                                        <rect key="frame" x="20" y="32" width="374" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="V8s-fD-Ypf"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBK-y3-8Q8">
-                                                        <rect key="frame" x="527.5" y="10" width="10.5" height="20.5"/>
+                                                        <rect key="frame" x="373.5" y="10" width="10.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -78,7 +84,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eFn-QN-q4k" userLabel="Food Container">
-                                                <rect key="frame" x="0.0" y="68" width="568" height="60"/>
+                                                <rect key="frame" x="0.0" y="68" width="414" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EC-rb-bNV">
                                                         <rect key="frame" x="30" y="10" width="70" height="17"/>
@@ -87,14 +93,14 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-cd-D3H">
-                                                        <rect key="frame" x="20" y="32" width="528" height="20"/>
+                                                        <rect key="frame" x="20" y="32" width="374" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Mjc-6S-TZy"/>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IlJ-gd-QeA">
-                                                        <rect key="frame" x="527.5" y="10" width="10.5" height="20.5"/>
+                                                        <rect key="frame" x="373.5" y="10" width="10.5" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -119,42 +125,57 @@
                                         <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VBZ-6b-I21" userLabel="Bottom Stack">
-                                        <rect key="frame" x="20" y="173" width="528" height="29"/>
+                                        <rect key="frame" x="20" y="173" width="374" height="29"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l35-Nc-HwS">
-                                                <rect key="frame" x="0.0" y="0.0" width="99" height="29"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="29"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Dog"/>
+                                                <connections>
+                                                    <action selector="changePet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hX2-WA-OIt"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THQ-Mb-vMq">
-                                                <rect key="frame" x="107" y="0.0" width="99.5" height="29"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THQ-Mb-vMq">
+                                                <rect key="frame" x="76.5" y="0.0" width="68.5" height="29"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Cat"/>
+                                                <connections>
+                                                    <action selector="changePet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ugi-Kh-0IN"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-NJ-HYJ">
-                                                <rect key="frame" x="214.5" y="0.0" width="99" height="29"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LyT-NJ-HYJ">
+                                                <rect key="frame" x="153" y="0.0" width="68" height="29"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Bird"/>
+                                                <connections>
+                                                    <action selector="changePet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DZF-sY-2hY"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-eT-WbW">
-                                                <rect key="frame" x="321.5" y="0.0" width="99.5" height="29"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nz-eT-WbW">
+                                                <rect key="frame" x="229" y="0.0" width="68.5" height="29"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Bunny"/>
+                                                <connections>
+                                                    <action selector="changePet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihf-46-UlR"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGU-ML-Wvd">
-                                                <rect key="frame" x="429" y="0.0" width="99" height="29"/>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGU-ML-Wvd">
+                                                <rect key="frame" x="305.5" y="0.0" width="68.5" height="29"/>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Fish"/>
+                                                <connections>
+                                                    <action selector="changePet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n4v-sL-kO8"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -180,11 +201,21 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ya-6k-lAd" userLabel="Top View">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="113"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="611"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bird" translatesAutoresizingMaskIntoConstraints="NO" id="jzX-yp-jEW">
+                                        <rect key="frame" x="0.0" y="255.5" width="414" height="100"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="jzX-yp-jEW" firstAttribute="leading" secondItem="2ya-6k-lAd" secondAttribute="leading" id="3Do-Yx-pIF"/>
+                                    <constraint firstAttribute="trailing" secondItem="jzX-yp-jEW" secondAttribute="trailing" id="dgR-sC-gJb"/>
+                                    <constraint firstItem="jzX-yp-jEW" firstAttribute="centerY" secondItem="2ya-6k-lAd" secondAttribute="centerY" id="tAq-Em-JIL"/>
+                                </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.1058823529" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2ya-6k-lAd" secondAttribute="trailing" id="1ox-mT-B4e"/>
                             <constraint firstItem="O2P-Dx-9Ea" firstAttribute="top" secondItem="2ya-6k-lAd" secondAttribute="bottom" id="2pj-YI-DRH"/>
@@ -196,10 +227,26 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="2ya-6k-lAd" id="jad-z7-Huh"/>
+                        <outlet property="foodBar" destination="OTq-cd-D3H" id="lIr-PD-0lT"/>
+                        <outlet property="foodLabel" destination="IlJ-gd-QeA" id="nYu-ak-Gfe"/>
+                        <outlet property="happinessBar" destination="OMg-it-j72" id="3ed-xq-2zd"/>
+                        <outlet property="happinessLabel" destination="CBK-y3-8Q8" id="423-4E-ULG"/>
+                        <outlet property="petImage" destination="jzX-yp-jEW" id="Ixv-4h-69I"/>
+                        <outletCollection property="petButtons" destination="l35-Nc-HwS" collectionClass="NSMutableArray" id="9dn-lk-01X"/>
+                        <outletCollection property="petButtons" destination="THQ-Mb-vMq" collectionClass="NSMutableArray" id="oSq-gF-xqd"/>
+                        <outletCollection property="petButtons" destination="LyT-NJ-HYJ" collectionClass="NSMutableArray" id="xbJ-F2-7Uu"/>
+                        <outletCollection property="petButtons" destination="8nz-eT-WbW" collectionClass="NSMutableArray" id="RTl-q5-r8U"/>
+                        <outletCollection property="petButtons" destination="jGU-ML-Wvd" collectionClass="NSMutableArray" id="1ZH-8Q-loO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.25" y="138.28125"/>
+            <point key="canvasLocation" x="130.43478260869566" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bird" width="100" height="100"/>
+    </resources>
 </document>
