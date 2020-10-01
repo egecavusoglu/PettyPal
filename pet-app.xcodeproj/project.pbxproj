@@ -15,7 +15,6 @@
 		829F13F625225B0100C6C8D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 829F13F425225B0100C6C8D0 /* LaunchScreen.storyboard */; };
 		82C28B972524F669001B6C83 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C28B962524F669001B6C83 /* DisplayView.swift */; };
 		82C28B992524F763001B6C83 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C28B982524F763001B6C83 /* Pet.swift */; };
-		82C28B9B2525394B001B6C83 /* Pets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C28B9A2525394B001B6C83 /* Pets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		829F13F725225B0100C6C8D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82C28B962524F669001B6C83 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		82C28B982524F763001B6C83 /* Pet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pet.swift; sourceTree = "<group>"; };
-		82C28B9A2525394B001B6C83 /* Pets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				829F13EB25225AFF00C6C8D0 /* SceneDelegate.swift */,
 				829F13ED25225AFF00C6C8D0 /* ViewController.swift */,
 				82C28B982524F763001B6C83 /* Pet.swift */,
-				82C28B9A2525394B001B6C83 /* Pets.swift */,
 				82C28B962524F669001B6C83 /* DisplayView.swift */,
 				829F13EF25225AFF00C6C8D0 /* Main.storyboard */,
 				829F13F225225B0100C6C8D0 /* Assets.xcassets */,
@@ -152,7 +149,6 @@
 				829F13EA25225AFF00C6C8D0 /* AppDelegate.swift in Sources */,
 				829F13EC25225AFF00C6C8D0 /* SceneDelegate.swift in Sources */,
 				82C28B992524F763001B6C83 /* Pet.swift in Sources */,
-				82C28B9B2525394B001B6C83 /* Pets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
