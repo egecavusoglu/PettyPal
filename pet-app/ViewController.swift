@@ -17,8 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet var petButtons: [UIButton]!
     @IBOutlet weak var happinessLabel: UILabel!
     @IBOutlet weak var foodLabel: UILabel!
-    @IBOutlet weak var happinessBar: UIView!
-    @IBOutlet weak var foodBar: UIView!
+    @IBOutlet weak var happinessBar: DisplayView!
+    @IBOutlet weak var foodBar: DisplayView!
+    
     
     // App State
     var activePet = 0
@@ -48,6 +49,11 @@ class ViewController: UIViewController {
         background.backgroundColor = pet.background
         happinessLabel.text = String(pet.totalHappiness)
         foodLabel.text = String(pet.totalFood)
+        happinessBar.color = pet.background
+        foodBar.color = pet.background
+        happinessBar.animateValue(to: CGFloat(pet.happiness) / 10.0)
+        foodBar.animateValue(to: CGFloat(pet.food) / 10.0)
+
     }
     
     @IBAction func changePet(_ sender: UIButton) {
@@ -56,7 +62,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func play(_ sender: Any) {
-        petDic[activePet]!.play()
+        let p = petDic[activePet]!
+        p.play()
+        happinessBar.animateValue(to: CGFloat(p.happiness) / 10.0)
+        foodBar.animateValue(to: CGFloat(p.food) / 10.0)
         renderPet(pet:petDic[activePet]!)
     }
     
@@ -64,7 +73,7 @@ class ViewController: UIViewController {
     @IBAction func feed(_ sender: Any) {
         let p = petDic[activePet]!
         p.feed()
-        foodView.animateValue(to: CGFloat(p.food) / 10.0)
+        foodBar.animateValue(to: CGFloat(p.food) / 10.0)
         renderPet(pet:petDic[activePet]!)
     }
     

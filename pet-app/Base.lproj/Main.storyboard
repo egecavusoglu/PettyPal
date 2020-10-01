@@ -57,7 +57,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-it-j72">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMg-it-j72" customClass="DisplayView" customModule="pet_app" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="32" width="374" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -92,7 +92,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-cd-D3H">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OTq-cd-D3H" customClass="DisplayView" customModule="pet_app" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="32" width="374" height="20"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
@@ -229,9 +229,9 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="2ya-6k-lAd" id="jad-z7-Huh"/>
-                        <outlet property="foodBar" destination="OTq-cd-D3H" id="lIr-PD-0lT"/>
+                        <outlet property="foodBar" destination="OTq-cd-D3H" id="D06-dA-fY5"/>
                         <outlet property="foodLabel" destination="IlJ-gd-QeA" id="nYu-ak-Gfe"/>
-                        <outlet property="happinessBar" destination="OMg-it-j72" id="3ed-xq-2zd"/>
+                        <outlet property="happinessBar" destination="OMg-it-j72" id="nnD-1Z-8i2"/>
                         <outlet property="happinessLabel" destination="CBK-y3-8Q8" id="423-4E-ULG"/>
                         <outlet property="petImage" destination="jzX-yp-jEW" id="Ixv-4h-69I"/>
                         <outletCollection property="petButtons" destination="l35-Nc-HwS" collectionClass="NSMutableArray" id="9dn-lk-01X"/>
