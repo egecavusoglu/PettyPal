@@ -203,15 +203,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ya-6k-lAd" userLabel="Top View">
                                 <rect key="frame" x="0.0" y="44" width="414" height="611"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bird" translatesAutoresizingMaskIntoConstraints="NO" id="jzX-yp-jEW">
-                                        <rect key="frame" x="0.0" y="255.5" width="414" height="100"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YKi-kY-BE0">
+                                        <rect key="frame" x="33.5" y="150" width="347" height="311"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bird" translatesAutoresizingMaskIntoConstraints="NO" id="jzX-yp-jEW">
+                                                <rect key="frame" x="123.5" y="0.0" width="100" height="100"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E8N-Of-34F">
+                                                <rect key="frame" x="0.0" y="116" width="347" height="195"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pH3-LW-lcn">
+                                                        <rect key="frame" x="0.0" y="0.0" width="339" height="195"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="347" id="58h-Zx-ym6"/>
+                                                    <constraint firstAttribute="height" constant="195" id="KNJ-7R-1JI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jzX-yp-jEW" firstAttribute="centerX" secondItem="YKi-kY-BE0" secondAttribute="centerX" id="bDt-XX-DCs"/>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.73333333329999995" green="0.88235294119999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="jzX-yp-jEW" firstAttribute="leading" secondItem="2ya-6k-lAd" secondAttribute="leading" id="3Do-Yx-pIF"/>
-                                    <constraint firstAttribute="trailing" secondItem="jzX-yp-jEW" secondAttribute="trailing" id="dgR-sC-gJb"/>
-                                    <constraint firstItem="jzX-yp-jEW" firstAttribute="centerY" secondItem="2ya-6k-lAd" secondAttribute="centerY" id="tAq-Em-JIL"/>
+                                    <constraint firstItem="YKi-kY-BE0" firstAttribute="leading" secondItem="2ya-6k-lAd" secondAttribute="leading" constant="33.5" id="4J6-V5-LYQ"/>
+                                    <constraint firstItem="YKi-kY-BE0" firstAttribute="centerY" secondItem="2ya-6k-lAd" secondAttribute="centerY" id="E7Y-Km-7BR"/>
+                                    <constraint firstAttribute="trailing" secondItem="YKi-kY-BE0" secondAttribute="trailing" constant="33.5" id="mxl-Nr-b43"/>
+                                    <constraint firstItem="YKi-kY-BE0" firstAttribute="centerX" secondItem="2ya-6k-lAd" secondAttribute="centerX" id="sXb-rG-4sL"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -233,7 +259,11 @@
                         <outlet property="foodLabel" destination="IlJ-gd-QeA" id="nYu-ak-Gfe"/>
                         <outlet property="happinessBar" destination="OMg-it-j72" id="nnD-1Z-8i2"/>
                         <outlet property="happinessLabel" destination="CBK-y3-8Q8" id="423-4E-ULG"/>
+                        <outlet property="height" destination="KNJ-7R-1JI" id="xcA-Ss-DwY"/>
+                        <outlet property="petDescription" destination="pH3-LW-lcn" id="dlf-Yl-fq7"/>
                         <outlet property="petImage" destination="jzX-yp-jEW" id="Ixv-4h-69I"/>
+                        <outlet property="petTextView" destination="E8N-Of-34F" id="rOM-Re-pCE"/>
+                        <outlet property="width" destination="58h-Zx-ym6" id="hyp-a3-syl"/>
                         <outletCollection property="petButtons" destination="l35-Nc-HwS" collectionClass="NSMutableArray" id="9dn-lk-01X"/>
                         <outletCollection property="petButtons" destination="THQ-Mb-vMq" collectionClass="NSMutableArray" id="oSq-gF-xqd"/>
                         <outletCollection property="petButtons" destination="LyT-NJ-HYJ" collectionClass="NSMutableArray" id="xbJ-F2-7Uu"/>

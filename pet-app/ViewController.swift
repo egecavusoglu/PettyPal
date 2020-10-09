@@ -12,13 +12,18 @@ import UIKit
 
 class ViewController: UIViewController {
     // Outlets
+    @IBOutlet weak var petTextView: UIView!
     @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var petDescription: UILabel!
     @IBOutlet weak var background: UIView!
     @IBOutlet var petButtons: [UIButton]!
     @IBOutlet weak var happinessLabel: UILabel!
     @IBOutlet weak var foodLabel: UILabel!
     @IBOutlet weak var happinessBar: DisplayView!
     @IBOutlet weak var foodBar: DisplayView!
+    
+    @IBOutlet weak var height: NSLayoutConstraint!
+    @IBOutlet weak var width: NSLayoutConstraint!
     
     
     // App State
@@ -32,6 +37,9 @@ class ViewController: UIViewController {
     var foodView = DisplayView.init(frame: CGRect())
     override func viewDidLoad() {
         super.viewDidLoad()
+        height.constant = 0
+        width.constant = 347
+
         // Do any additional setup after loading the view.
         petDic = [
             0: dog,
@@ -67,6 +75,8 @@ class ViewController: UIViewController {
         happinessBar.animateValue(to: CGFloat(p.happiness) / 10.0)
         foodBar.animateValue(to: CGFloat(p.food) / 10.0)
         renderPet(pet:petDic[activePet]!)
+        
+        animate()
     }
     
     
@@ -75,6 +85,20 @@ class ViewController: UIViewController {
         p.feed()
         foodBar.animateValue(to: CGFloat(p.food) / 10.0)
         renderPet(pet:petDic[activePet]!)
+    }
+    
+    func animate(){
+        
+        UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
+            self.height.constant = 195
+            self.width.constant = 347
+            self.view.layoutIfNeeded()
+            self.petDescription.text = "I'm a text label"        }) { (success: Bool) in
+          print("Done moving image")
+          }
+        
+        
+        
     }
     
 }
