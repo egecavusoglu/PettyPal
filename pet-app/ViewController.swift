@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AVFoundation
 
 
 class ViewController: UIViewController {
@@ -88,14 +88,18 @@ class ViewController: UIViewController {
     }
     
     func animate(){
-        self.petDescription.text = petDic[activePet]?.funfact
+        let text = petDic[activePet]?.funfact
+        self.petDescription.text = text
+        let utterance = AVSpeechUtterance(string: text!)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
             self.height.constant = 140
             self.width.constant = 250
             self.petDescription.alpha = 1
             self.view.layoutIfNeeded()
                     }) { (success: Bool) in
-          print("Done moving image")
+          let synth = AVSpeechSynthesizer()
+          synth.speak(utterance)
           }
     }
     
