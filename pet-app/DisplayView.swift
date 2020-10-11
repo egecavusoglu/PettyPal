@@ -56,9 +56,9 @@ class DisplayView: UIView {
     }
     
     /// Animates the bar to the specified value. Valid range is between 0 and 1.
-    public func animateValue(to newValue: CGFloat) {
+    public func animateValue(to newValue: CGFloat, animated: Bool) {
         self.modelValue = newValue
-        self.update(animated: true)
+        self.update(animated: animated)
     }
     
     private func update(animated: Bool) {

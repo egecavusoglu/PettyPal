@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var width: NSLayoutConstraint!
     
     
+    
     // App State
     var activePet = 0
     var dog = Pet(pet:.Dog)
@@ -57,8 +58,8 @@ class ViewController: UIViewController {
         foodLabel.text = String(pet.totalFood)
         happinessBar.color = pet.background
         foodBar.color = pet.background
-        happinessBar.animateValue(to: CGFloat(pet.happiness) / 10.0)
-        foodBar.animateValue(to: CGFloat(pet.food) / 10.0)
+        happinessBar.animateValue(to: CGFloat(pet.happiness) / 10.0, animated: false)
+        foodBar.animateValue(to: CGFloat(pet.food) / 10.0, animated: false)
 
     }
     
@@ -69,25 +70,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func play(_ sender: Any) {
+        resetFuncfact(animated: false)
         let p = petDic[activePet]!
         p.play()
-        happinessBar.animateValue(to: CGFloat(p.happiness) / 10.0)
-        foodBar.animateValue(to: CGFloat(p.food) / 10.0)
+        happinessBar.animateValue(to: CGFloat(p.happiness) / 10.0, animated:true)
+        foodBar.animateValue(to: CGFloat(p.food) / 10.0, animated:true)
         renderPet(pet:petDic[activePet]!)
         
-        animate()
     }
-    
-    
-    @IBAction func feed(_ sender: Any) {
-        let p = petDic[activePet]!
-        p.feed()
-        foodBar.animateValue(to: CGFloat(p.food) / 10.0)
-        renderPet(pet:petDic[activePet]!)
-        resetFuncfact(animated: true)
-    }
-    
-    func animate(){
+    @IBAction func funfactButton(_ sender: Any) {
         let text = petDic[activePet]?.funfact
         self.petDescription.text = text
         let utterance = AVSpeechUtterance(string: text!)
@@ -102,6 +93,16 @@ class ViewController: UIViewController {
           synth.speak(utterance)
           }
     }
+    
+    @IBAction func feed(_ sender: Any) {
+        let p = petDic[activePet]!
+        p.feed()
+        foodBar.animateValue(to: CGFloat(p.food) / 10.0, animated:true)
+        renderPet(pet:petDic[activePet]!)
+        resetFuncfact(animated: true)
+    }
+    
+   
     
     func resetFuncfact (animated:Bool) {
         if (animated){
