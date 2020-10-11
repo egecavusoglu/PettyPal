@@ -17,11 +17,11 @@ enum PetEnums {
     case Fish
 }
 let petDictionary = [
-    PetEnums.Dog:  [UIImage.init(named: "Dog")!, UIColor.systemIndigo],
-    PetEnums.Cat:  [UIImage.init(named: "Cat")!, UIColor.orange],
-    PetEnums.Bird:  [UIImage.init(named: "Bird")!, UIColor.yellow],
-    PetEnums.Bunny:  [UIImage.init(named: "Bunny")!, UIColor.systemPurple],
-    PetEnums.Fish:  [UIImage.init(named: "Fish")!, UIColor.systemTeal],
+    PetEnums.Dog:  [UIImage.init(named: "Dog")!, UIColor.systemIndigo, "Huskies have a thick double coat that keeps them well insulated."],
+    PetEnums.Cat:  [UIImage.init(named: "Cat")!, UIColor.orange, "A house cat is genetically 95.6% tiger."],
+    PetEnums.Bird:  [UIImage.init(named: "Bird")!, UIColor.yellow, "Parrots are believed to be one of the most intelligent bird species."],
+    PetEnums.Bunny:  [UIImage.init(named: "Bunny")!, UIColor.systemPurple, "A rabbit's teeth never stop growing."],
+    PetEnums.Fish:  [UIImage.init(named: "Fish")!, UIColor.systemTeal, "There are over 30000 known species of fish."],
     
 ]
 class Pet {
@@ -31,6 +31,7 @@ class Pet {
     var food: Int
     var totalFood: Int
     var background: UIColor
+    var funfact: String
     init(pet: PetEnums) {
         image = petDictionary[pet]![0] as! UIImage
         background = petDictionary[pet]![1] as! UIColor
@@ -38,6 +39,7 @@ class Pet {
         totalHappiness = 0
         food = 0
         totalFood = 0
+        funfact = petDictionary[pet]![2] as! String
     }
     
     func feed() {

@@ -37,9 +37,7 @@ class ViewController: UIViewController {
     var foodView = DisplayView.init(frame: CGRect())
     override func viewDidLoad() {
         super.viewDidLoad()
-        height.constant = 0
-        width.constant = 347
-
+        resetFuncfact(animated: false)
         // Do any additional setup after loading the view.
         petDic = [
             0: dog,
@@ -65,6 +63,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changePet(_ sender: UIButton) {
+        resetFuncfact(animated: false)
         activePet = sender.tag
         renderPet(pet:petDic[activePet]!)
     }
@@ -85,20 +84,36 @@ class ViewController: UIViewController {
         p.feed()
         foodBar.animateValue(to: CGFloat(p.food) / 10.0)
         renderPet(pet:petDic[activePet]!)
+        resetFuncfact(animated: true)
     }
     
     func animate(){
-        
+        self.petDescription.text = petDic[activePet]?.funfact
         UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
-            self.height.constant = 195
-            self.width.constant = 347
+            self.height.constant = 140
+            self.width.constant = 250
+            self.petDescription.alpha = 1
             self.view.layoutIfNeeded()
-            self.petDescription.text = "I'm a text label"        }) { (success: Bool) in
+                    }) { (success: Bool) in
           print("Done moving image")
           }
-        
-        
-        
+    }
+    
+    func resetFuncfact (animated:Bool) {
+        if (animated){
+            UIView.animate(withDuration: 0.4, delay: 0, options: .curveLinear, animations: {
+              self.height.constant = 0
+              self.width.constant = 0
+              self.petDescription.alpha = 0
+              self.view.layoutIfNeeded()
+                      })
+        }
+        else{
+            height.constant = 0
+            width.constant = 0
+            petDescription.alpha = 0;
+        }
+        self.petDescription.text = ""
     }
     
 }
